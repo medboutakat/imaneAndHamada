@@ -1,0 +1,51 @@
+<head>
+ <title>GM-Soft Blog</title>
+ <style>
+     #logo
+    {
+        padding-top: 150px;
+        padding-bottom: 60px;
+        width: auto;
+    }
+    #divBar
+    {
+        text-align: center;
+        background-image: url(https://www.jmp.com/fr_fr/software/predictive-analytics-software/_jcr_content/par/styledcontainer_7990/image.img.jpg/1473369767542.jpg);
+        margin: -30px;
+    }
+ </style>
+
+</head>
+
+    <div id="divBar">
+        <h1 id="logo" style="color: black">Welcome to GM-Soft Blog</h1>
+    </div>
+    <tbody>
+       
+     
+         <div class="container">
+            <div class="row">
+             <div class="col-md-6">
+              <input type="file" style="padding-top: 25px">
+
+             </div>
+             <div class="col-md-6">
+                    <input type="date" value="2019-01-01" >
+             </div>
+            </div>
+         </div>
+     
+               
+            
+         
+       
+     
+    
+    
+        <tr *ngFor="let items of service.blogs" >
+            <td>{{items.image}}</td><br/>
+            <td>{{items.name}}</td>
+            <td>{{items.publishdate}}</td>
+            <td>{{items.texts}}</td>
+        </tr>
+    </tbody>
