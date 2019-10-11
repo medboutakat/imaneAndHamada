@@ -12541,11 +12541,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\imane\\OneDrive\\Bureau\\WebsiteApi\\WebsiteApi\\WebsiteApi.csproj",
+      "projectUniqueName": "C:\\Users\\imane\\OneDrive\\Bureau\\GmSoft\\Api\\WebsiteApi\\WebsiteApi.csproj",
       "projectName": "WebsiteApi",
-      "projectPath": "C:\\Users\\imane\\OneDrive\\Bureau\\WebsiteApi\\WebsiteApi\\WebsiteApi.csproj",
+      "projectPath": "C:\\Users\\imane\\OneDrive\\Bureau\\GmSoft\\Api\\WebsiteApi\\WebsiteApi.csproj",
       "packagesPath": "C:\\Users\\imane\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\imane\\OneDrive\\Bureau\\WebsiteApi\\WebsiteApi\\obj\\",
+      "outputPath": "C:\\Users\\imane\\OneDrive\\Bureau\\GmSoft\\Api\\WebsiteApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
