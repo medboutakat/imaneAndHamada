@@ -21,31 +21,28 @@
         <h1 id="logo" style="color: black">Welcome to GM-Soft Blog</h1>
     </div>
     <tbody>
-       
-     
-         <div class="container">
-            <div class="row">
-             <div class="col-md-6">
-              <input type="file" style="padding-top: 25px">
+       <div class="row ">
+           <div class="col s8 offset-2">
+              <div class="card-panel teal lighten-2">
+                  <h5  style="padding: 20px"> </h5>
+                </div>
+                 <!-- <div class="col-md-12 my-auto side-herder">
+                     <img src="/assets/img/logo-icon.png" >
+                      <h1>Imane Slague</h1>
+                 </div> -->
+               <form #imageForm=ngForm (ngSubmit)="OnSubmit(caption,image)">
+                   <div class="row">
+                     <div class="input-field col s12">
+                         <input type="text" #caption ngModel name="Caption" id="Caption" required>
+                         <label for="Caption"><Caption></Caption></label>
+                     </div>
+                   </div>
+                     <img [src]="imageUrl" style="width:600px ; height:400px">
+                     <input type="file" #image accept="image/*" (change)="handleFileInput($event.target.files)">
+                     <button type="submit" class=" btn-dark btn-lg" [disabled]="image.value=='' || imageForm.valid">submit</button>
+                      
+                    </form>
+           </div>
+       </div>
 
-             </div>
-             <div class="col-md-6">
-                    <input type="date" value="2019-01-01" >
-             </div>
-            </div>
-         </div>
-     
-               
-            
-         
-       
-     
-    
-    
-        <tr *ngFor="let items of service.blogs" >
-            <td>{{items.image}}</td><br/>
-            <td>{{items.name}}</td>
-            <td>{{items.publishdate}}</td>
-            <td>{{items.texts}}</td>
-        </tr>
     </tbody>
