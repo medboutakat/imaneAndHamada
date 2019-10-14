@@ -10,6 +10,8 @@ using WebsiteApi.Models;
 
 namespace WebsiteApi.Controllers
 {
+
+    // khassak tssyeb l migration   dik database update
     [Route("api/[controller]")]
     [ApiController]
     [EnableCors("CorsPolicy")]

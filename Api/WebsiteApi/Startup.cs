@@ -22,7 +22,7 @@ namespace WebsiteApi
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             services.AddDbContext<DbBlogContext>(Options =>
             {
-                Options.UseSqlServer(Configuration.GetConnectionString("DbBlog"));
+                Options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection2"));
             });
             services.AddCors(Options =>
             {
