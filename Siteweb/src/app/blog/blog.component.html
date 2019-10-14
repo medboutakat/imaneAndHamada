@@ -13,6 +13,13 @@
         background-image: url(https://www.jmp.com/fr_fr/software/predictive-analytics-software/_jcr_content/par/styledcontainer_7990/image.img.jpg/1473369767542.jpg);
         margin: -30px;
     }
+    .fon{
+            text-justify: auto;
+            font-family: monospace;
+            font-weight: bold;
+            font-size: 20px;
+            word-spacing: 15px;
+        }    
  </style>
 
 </head>
@@ -30,17 +37,37 @@
                      <img src="/assets/img/logo-icon.png" >
                       <h1>Imane Slague</h1>
                  </div> -->
-               <form #imageForm=ngForm (ngSubmit)="OnSubmit(caption,image)">
+               <form #imageForm=ngForm (Submit)="submit(form)">
                    <div class="row">
                      <div class="input-field col s12">
-                         <input type="text" #caption ngModel name="Caption" id="Caption" required>
+                         <input type="text"#caption ngModel name="Caption" id="Caption" required>
                          <label for="Caption"><Caption></Caption></label>
                      </div>
                    </div>
                      <img [src]="imageUrl" style="width:600px ; height:400px">
-                     <input type="file" #image accept="image/*" (change)="handleFileInput($event.target.files)">
+                     <input type="file" ([ngModel])="service.blog.images" #image accept="image/*" (change)="handleFileInput($event.target.files)">
+                <table>
+                    <tr>
+                        <td>
+                            <input  type="name" ([ngModel])="service.blog.name" placeholder="Your Name"SIZE=40 /><br>
+                        </td>
+                        <td>
+                            <input type="date" ([ngModel])="service.blog.publishdate" value="2019-01-01">
+                        </td>
+                    </tr>
+                </table>
+                <p class="fon" ([ngModel])="service.blog.texts">
+                    L’HyperText Markup Language, généralement abrégé HTML,
+                    est le langage de balisage conçu pour représenter les pages web. 
+                    C’est un langage permettant d’écrire de l’hypertexte, d’où son nom.
+                    HTML permet également de structurer sémantiquement et logiquement et
+                    de mettre en forme le contenu des pages, d’inclure des ressources multimédias dont des images,
+                    des formulaires de saisie et des programmes informatiques.
+                    Il permet de créer des documents interopérables avec des équipements très variés de manière conforme aux exigences de l’accessibilité du web.
+                    Il est souvent utilisé conjointement avec le langage de programmation JavaScript et des feuilles de style en cascade (CSS).
+                    HTML est inspiré du Standard Generalized Markup Language (SGML). Il s'agit d'un format ouvert.
+                 </p>
                      <button type="submit" class=" btn-dark btn-lg" [disabled]="image.value=='' || imageForm.valid">submit</button>
-                      
                     </form>
            </div>
        </div>

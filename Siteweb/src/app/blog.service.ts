@@ -9,6 +9,7 @@ import { BlockingProxy } from 'blocking-proxy';
 export class BlogService {
   url:string="https://localhost:44343/api/blogs"
   blogs:Blog[];
+  blog:Blog;
   constructor(private http:HttpClient) {  }
     getAllBlogs(){
       this.http.get(this.url).toPromise().then(
@@ -16,6 +17,10 @@ export class BlogService {
           this.blogs = res as Blog[];
         }
       )
+    }
+    postblog()
+    {
+      return this.http.post(this.url,this.blog);
     }
  
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BlogService } from '../blog.service';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-blog',
@@ -16,6 +17,14 @@ constructor(private service:BlogService) { }
 
   ngOnInit() { 
     this.service.getAllBlogs();
+    this.service.blog ={
+      id:0,
+      images:null,
+      name:null,
+      publishdate:null,
+      texts:null,
+
+    }
   }
     handleFileInput(file:FileList)
     {
@@ -32,6 +41,15 @@ constructor(private service:BlogService) { }
       }
       reader.readAsDataURL(event);
     }
- 
+  submit(from:NgForm)
+ {
+   this.service.postblog().subscribe(res =>
+    {
+     this.service.getAllBlogs()
+    },
+      err =>{
+        console.log("err")
+      } )
+ }
 
 }
