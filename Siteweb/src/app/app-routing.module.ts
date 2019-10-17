@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { BlogComponent } from './blog/blog.component';
 import { IntroComponent } from './intro/intro.component';
 import { HomeComponent } from './home/home.component';
+import { PostComponent } from './post/post.component';
 // import { BlogModule } from './BlogModule/Blog.Module';
 
 const routes: Routes = [
@@ -25,7 +26,12 @@ const routes: Routes = [
     path:'blog',
     component:BlogComponent,
     pathMatch:'full'
-  }
+  },
+  {
+    path:'post',
+    component:PostComponent,
+    pathMatch:'full'
+  },
 ];
 
 @NgModule({
